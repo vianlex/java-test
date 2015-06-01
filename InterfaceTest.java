@@ -25,6 +25,12 @@ interface MyInterface2{
 	public void whoAmI();
 }
 
+class MyClass{
+
+	public void myname(){
+		System.out.println("my name is myclass");
+	} 
+}
 //java是但继承的，但是可以实现多个接口，例如下面的例子
 
 class Myclass1 implements MyInterface1{
@@ -37,6 +43,17 @@ class Myclass1 implements MyInterface1{
 
 class MyClass2 implements MyInterface1,  MyInterface2{
 	
+	public void sayHi(String who){
+		System.out.println("Hello  " + who);
+	}
+
+	public void whoAmI(){
+		System.out.println("I am a MyInterface2y");
+	}
+}
+
+class MyClass3 extends MyClass implements MyInterface1, MyInterface2{
+
 	public void sayHi(String who){
 		System.out.println("Hello  " + who);
 	}
