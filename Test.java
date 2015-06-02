@@ -17,7 +17,7 @@ public class Test{
 		System.out.println(test.add(1, 3) + '\n');
 		System.out.println(test.add("I am a ", "pythoner") + '\n');
 		System.out.println(test.add(2.4 , 5.8));
+
 	}
 
 }
-

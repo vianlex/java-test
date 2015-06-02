@@ -62,3 +62,4 @@ class MyClass3 extends MyClass implements MyInterface1, MyInterface2{
 		System.out.println("I am a MyInterface2y");
 	}
 }
+
