@@ -92,3 +92,10 @@ char 的初始值是'\u0000' (java 使用的是unicode编码), boolean的初始�
 
 		3) final 修饰方法的时候，表示该方法是一个终态，不能够重写(覆写)。
 	
+21. static 关键字可以在类里定义一个代码块， 例如：
+		class Perison{
+		      static {
+		      		System.out.println("I am static block");
+		      }
+		}
+静态代码块也是执行一下初始化的工作，但是它在JVM加载类的时候，就调用执行了。跟构造方法不同，构造方法是只在new生成对象的时候执行。还有一点，static代码块只会执行一次，因为类只加载一次。
