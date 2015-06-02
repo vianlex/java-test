@@ -52,6 +52,7 @@ char 的初始值是'\u0000' (java 使用的是unicode编码), boolean的初始�
 
 11、 类中在一个构造方法中调用调用另一个构造方法可以使用this；
 
+
 12. 继承(inheritance):  
 	java只支持单继承， 继承要使用关键字extends。 
 	java子类生成对象的时候， 必须先调用父类的构造方法， 只有生成父类了， 才能够生成子类。 (有父才能有子)； 
@@ -68,6 +69,7 @@ char 的初始值是'\u0000' (java 使用的是unicode编码), boolean的初始�
 		a) 抽象类使用abstract关键字修饰
 		b) 抽象类不能够实例化
 		c) 抽象类也是可以定义非抽象的方法
+		d) 抽象类只能过子类来继承。如果子类非抽象的，则子类必须实现抽象类的所有方法，包括抽象类的父类的父类方法
 		
 15. 抽象方法(abstract method)：
 	a) 使用abstract关键字修饰方法
@@ -103,4 +105,17 @@ char 的初始值是'\u0000' (java 使用的是unicode编码), boolean的初始�
 
 22. 单实例模式(singleton): 表示一个类只能生成一个实例对象,例子在SingletonTest.java中。
 
-在java中"=="比较的是俩个变量的字面值，是否相等。equals方法要查看它的重写才能去判断，它是根据什么比较的。
+在java中"=="比较的是俩个变量的值，是否相等。equals方法要查看它的重写才能去判断，它是根据什么比较的。
+
+23. string pool(字符串池)， 用字面量创建字符串对象时，它会检查字符串池中是否已有该值，如果有则返回该
+对象的引用，没有创建新的对象。 new创建字符串的话，new每次都会去申请内存给对象，所以返回的引用是不一样的。
+
+24 instanceof 运算符用于判断，对象是否属于某个类的， 例如： objstring instanceof String
+
+25. java.lang.object类。 java.lang包在使用的时候无需显示的导入，编译器在编译的时候会自动导入。 
+
+26. 包(Package): 用于将不同功能的类，放在不同的目录下。使用Package声明当前文件所在的位置.
+	声明的规则是：如果文件所在的目录是zykcome/java-test/test.class, 则可以在文件头部声明，具体的格式为
+	Packeage java-test.zykcome跟目录是反过来的，这就声明了test.clas所在的位置，在其他文件引用test.classde的
+	时候直接使用import java-test.zykcome.test引用该类。
+

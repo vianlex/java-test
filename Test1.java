@@ -1,38 +1,21 @@
-public class  Test1{
-
-	public void run(Car car){
-		car.run();
-	}
-
-
+public class Test1
+{
 	public static void main(String[] args) {
-		
-		Test1 t = new Test1();
-		// Car car = new QQ();
-		t.run((new QQ()));
-
+		Man man = new Man(1);
 	}
 }
 
-
-class Car{
-
-	public void run(){
-		System.out.println("Car is running!");
+class Persion
+{
+	public Persion(){
+		System.out.println("I am Persion");
 	}
+
 }
 
-class QQ extends Car{
-	
-	public void run(){
-		System.out.println("QQ car running!");
+class Man extends Persion
+{
+	public Man(int i){
+		System.out.println("I am Man");
 	}
 }
-
-class BMW extends Car{
-
-	public void run(){
-		System.out.println("BWM is running!");	
-	}
-}
-
